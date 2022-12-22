@@ -6,7 +6,7 @@ Rake::Task[assets_task].enhance do
   assets = Pathname.new(File.expand_path(File.dirname(__FILE__) + "/../../vendor/assets/javascripts/tinymce"))
   
   config   = Rails.application.config
-  target   = File.join(Rails.public_path, config.assets.prefix)
+  target   = File.join(Rails.public_path, config.assets.prefix, 'vid6')
   manifest = config.assets.manifest
   
   installer = TinyMCE::Rails::AssetInstaller.new(assets, target, manifest)
